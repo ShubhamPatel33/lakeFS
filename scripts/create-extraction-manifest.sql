@@ -7,16 +7,16 @@
 --
 --     "psql -var repository_name=foo -var branch_name=master --var dst_bucket_name=foo-extract".
 
--- Variable repository_name: repository to be extracted.  Must be
+-- Variable repository_name: repository to be extracted,  Must be
 -- specified.
 --
--- Variable branch_name: branch to be extracted.  Must be specified
+-- Variable branch_name: branch to be extracted, Must be specified
 -- (otherwise object paths can identify more than a single object).
 --
--- Variable dst_bucket_name: name of bucket to place files.  Must be
+-- Variable dst_bucket_name: name of bucket to place files, Must be
 -- specified.
 
--- Avoid superfluous output (such as "CREATE FUNCTION)
+-- Avoid superfluous output (such as "CREATE FUNCTION).
 \set QUIET 1
 
 CREATE FUNCTION pg_temp.maybe_concat_slash(p text)
